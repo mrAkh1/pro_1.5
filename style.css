@@ -1,0 +1,238 @@
+﻿@font-face {
+  font-family: "TT Lakes";
+  src: url("fonts/TTLakes-Regular.woff2") format("woff2"),
+    url("fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("fonts/TTLakes-Bold.woff2") format("woff2"),
+    url("fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("fonts/TTLakes-Medium.woff2") format("woff2"),
+    url("fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "TT Lakes"
+}
+
+img {
+  display: block;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.brands__header {
+  color: rgb(126, 126, 130);
+  font-family: TT Lakes;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  text-transform: uppercase;
+  border-top: rgb(217, 255, 245) solid 1px;
+}
+
+.brands__header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-image: linear-gradient(to right, rgb(248, 248, 248),
+      rgb(255, 255, 255));
+}
+
+.brands-slider__item {
+  max-width: 240px;
+}
+
+.brand__item {
+  display: flex;
+  justify-content: space-between;
+  border: #eaeaea 1px solid;
+  border-radius: 6px;
+  align-items: center;
+  height: 72px;
+  padding: 0 16px;
+  transition: opacity 0.2s ease-in;
+}
+
+.brand__item:hover {
+  opacity: 70%
+}
+
+.--container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.logo-img1 {
+  max-width: 128px;
+  max-height: 52px;
+}
+
+.logo-img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.swiper .swiper-pagination {
+  position: static;
+  line-height: 44px;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px !important;
+}
+
+.button-dropdown {
+  display: none;
+}
+
+.brands-slider {
+  position: relative;
+  padding-top: 16px;
+  background: rgb(248, 248, 248)
+}
+
+.brands-slider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 72px;
+  right: 0px;
+  top: 0px;
+  background: linear-gradient(270.00deg, rgb(248, 248, 248) 16.836%, rgba(248, 248, 248, 0) 100%);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .brands-slider__list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 16px 24px;
+    height: 160px;
+    overflow-y: hidden;
+  }
+
+  .brands-slider__list--maxHeight {
+    height: auto;
+  }
+
+  .brands-slider__item {
+    min-width: 224px;
+    max-width: none;
+  }
+
+  .brands-slider {
+    padding-top: 24px;
+  }
+
+  .--container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+
+  .button-dropdown {
+    display: block
+  }
+
+  .button__more--open {
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .button__more--close {
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .button__more--open:hover {
+    opacity: 70%
+  }
+
+  .button__more--close:hover {
+    opacity: 70%
+  }
+
+  .button__more--descr {
+    position: absolute;
+    top: 1px;
+    left: 33px;
+    padding-left: 0px;
+    font-style: normal;
+    white-space: nowrap;
+    color: rgb(27, 28, 33);
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+  }
+
+  .swiper-pagination {
+    display: none
+  }
+
+  .button__more--hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands-slider__list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 16px 32px;
+  }
+
+  .brands-slider__item {
+    min-width: 240px;
+    max-width: none;
+  }
+
+  .brands-slider {
+    padding-top: 24px;
+  }
+
+  .--container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .button__more--close {
+    margin-top: 46px;
+  }
+}
